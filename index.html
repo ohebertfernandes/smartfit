@@ -151,58 +151,75 @@
         ::-webkit-scrollbar-thumb { background: #FBBA00; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #E5A900; }
 
-        /* Nav Transition */
+        /* Header Flutuante Premium */
         #navbar {
-            transition: background-color 0.4s ease, backdrop-filter 0.4s ease, padding 0.4s ease, border-bottom 0.4s ease;
+            position: fixed;
+            z-index: 50;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 2rem);
+            max-width: 80rem; /* max-w-7xl */
+            background-color: rgba(255, 255, 255, 0.85); /* Mais claro e translúcido */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 9999px; /* Arredondado */
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         #navbar.scrolled {
-            background-color: rgba(10, 10, 10, 0.9);
-            backdrop-filter: blur(12px);
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+            top: 1rem;
+            padding: 0.75rem 2rem;
+            border-color: rgba(0, 0, 0, 0.05);
+        }
+        @media (max-width: 640px) {
+            #navbar {
+                padding: 0.75rem 1.5rem;
+            }
         }
     </style>
 </head>
 <body class="bg-smart-black text-white antialiased font-sans overflow-x-hidden">
 
-    <!-- Sticky Header para LP -->
-    <header id="navbar" class="fixed w-full top-0 z-50 py-5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            
-            <!-- Logo -->
-            <a href="#inicio" class="bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-full drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)] hover:scale-105 transition-transform duration-300 inline-flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Smart_Fit_logo.svg/1280px-Smart_Fit_logo.svg.png" alt="Smart Fit Logo" class="h-4 md:h-5 w-auto">
-            </a>
+    <!-- Sticky Floating Header -->
+    <header id="navbar">
+        <!-- Logo Aumentada -->
+        <a href="#inicio" class="transition-transform duration-300 hover:scale-105 flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Smart_Fit_logo.svg/1280px-Smart_Fit_logo.svg.png" alt="Smart Fit Logo" class="h-8 md:h-10 lg:h-11 w-auto">
+        </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-6 py-2.5 gap-8 shadow-lg">
-                <a href="#oferta" class="text-xs font-black uppercase tracking-widest text-gray-300 hover:text-smart-yellow hover:-translate-y-0.5 transition-all">A Oferta</a>
-                <a href="#diferenciais" class="text-xs font-black uppercase tracking-widest text-gray-300 hover:text-smart-yellow hover:-translate-y-0.5 transition-all">Diferenciais</a>
-                <a href="#estrutura" class="text-xs font-black uppercase tracking-widest text-gray-300 hover:text-smart-yellow hover:-translate-y-0.5 transition-all">Estrutura</a>
-                <a href="#app" class="text-xs font-black uppercase tracking-widest text-gray-300 hover:text-smart-yellow hover:-translate-y-0.5 transition-all">App</a>
-                <a href="#depoimentos" class="text-xs font-black uppercase tracking-widest text-gray-300 hover:text-smart-yellow hover:-translate-y-0.5 transition-all">Depoimentos</a>
-            </nav>
+        <!-- Desktop Navigation (Sem fundo extra para ficar clean) -->
+        <nav class="hidden lg:flex items-center gap-8">
+            <a href="#oferta" class="text-xs font-black uppercase tracking-widest text-smart-dark hover:text-smart-yellow hover:-translate-y-0.5 transition-transform">A Oferta</a>
+            <a href="#diferenciais" class="text-xs font-black uppercase tracking-widest text-smart-dark hover:text-smart-yellow hover:-translate-y-0.5 transition-transform">Diferenciais</a>
+            <a href="#estrutura" class="text-xs font-black uppercase tracking-widest text-smart-dark hover:text-smart-yellow hover:-translate-y-0.5 transition-transform">Estrutura</a>
+            <a href="#app" class="text-xs font-black uppercase tracking-widest text-smart-dark hover:text-smart-yellow hover:-translate-y-0.5 transition-transform">App</a>
+            <a href="#depoimentos" class="text-xs font-black uppercase tracking-widest text-smart-dark hover:text-smart-yellow hover:-translate-y-0.5 transition-transform">Depoimentos</a>
+        </nav>
 
-            <!-- CTA Header (Desktop) -->
-            <a href="#inicio" class="hidden lg:inline-flex bg-smart-yellow hover:bg-smart-yellowHover text-smart-black px-6 py-2.5 rounded-full font-black uppercase tracking-widest text-xs items-center gap-2 transition-transform transform hover:scale-105 shadow-[0_0_15px_rgba(251,186,0,0.2)]">
-                Agendar VIP <i class="ph-bold ph-ticket"></i>
-            </a>
+        <!-- CTA Header (Desktop) -->
+        <a href="#inicio" class="hidden lg:inline-flex bg-smart-yellow hover:bg-smart-yellowHover text-smart-black px-7 py-3 rounded-full font-black uppercase tracking-widest text-xs items-center gap-2 transition-transform transform hover:scale-105 shadow-md">
+            Agendar VIP <i class="ph-bold ph-ticket text-lg"></i>
+        </a>
 
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-btn" class="lg:hidden bg-black/50 backdrop-blur-md p-2.5 rounded-full border border-white/10 text-white hover:text-smart-yellow transition-colors">
-                <i class="ph-bold ph-list text-xl"></i>
-            </button>
-
-        </div>
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="lg:hidden text-smart-black p-1 hover:text-smart-yellow transition-colors">
+            <i class="ph-bold ph-list text-3xl"></i>
+        </button>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-white/10 flex flex-col shadow-2xl">
-            <a href="#oferta" class="px-6 py-4 border-b border-white/5 text-sm font-black uppercase tracking-widest text-gray-200 hover:text-smart-yellow hover:bg-white/5 transition-colors mobile-link">A Oferta</a>
-            <a href="#diferenciais" class="px-6 py-4 border-b border-white/5 text-sm font-black uppercase tracking-widest text-gray-200 hover:text-smart-yellow hover:bg-white/5 transition-colors mobile-link">Diferenciais</a>
-            <a href="#estrutura" class="px-6 py-4 border-b border-white/5 text-sm font-black uppercase tracking-widest text-gray-200 hover:text-smart-yellow hover:bg-white/5 transition-colors mobile-link">Estrutura</a>
-            <a href="#app" class="px-6 py-4 border-b border-white/5 text-sm font-black uppercase tracking-widest text-gray-200 hover:text-smart-yellow hover:bg-white/5 transition-colors mobile-link">App</a>
-            <a href="#depoimentos" class="px-6 py-4 text-sm font-black uppercase tracking-widest text-gray-200 hover:text-smart-yellow hover:bg-white/5 transition-colors mobile-link">Depoimentos</a>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-4 bg-white/95 backdrop-blur-xl rounded-3xl flex flex-col shadow-2xl border border-gray-100 overflow-hidden">
+            <a href="#oferta" class="px-6 py-4 border-b border-gray-100 text-sm font-black uppercase tracking-widest text-smart-dark hover:text-smart-yellow hover:bg-gray-50 transition-colors mobile-link">A Oferta</a>
+            <a href="#diferenciais" class="px-6 py-4 border-b border-gray-100 text-sm font-black uppercase tracking-widest text-smart-dark hover:text-smart-yellow hover:bg-gray-50 transition-colors mobile-link">Diferenciais</a>
+            <a href="#estrutura" class="px-6 py-4 border-b border-gray-100 text-sm font-black uppercase tracking-widest text-smart-dark hover:text-smart-yellow hover:bg-gray-50 transition-colors mobile-link">Estrutura</a>
+            <a href="#app" class="px-6 py-4 border-b border-gray-100 text-sm font-black uppercase tracking-widest text-smart-dark hover:text-smart-yellow hover:bg-gray-50 transition-colors mobile-link">App</a>
+            <a href="#depoimentos" class="px-6 py-4 text-sm font-black uppercase tracking-widest text-smart-dark hover:text-smart-yellow hover:bg-gray-50 transition-colors mobile-link">Depoimentos</a>
         </div>
     </header>
 
@@ -550,52 +567,59 @@
         </section>
 
         <!-- 5ª Seção - App -->
-        <section id="app" class="bg-[#0a0a0a] text-white py-32 overflow-hidden relative border-t border-gray-900">
-            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-smart-yellow rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-pulse-slow pointer-events-none z-0"></div>
+        <section id="app" class="bg-[#FFF3E0] text-[#1a1a1a] py-32 overflow-hidden relative border-t border-gray-200">
+            <div class="absolute inset-0 w-full h-[140%] -top-[20%] overflow-hidden z-0 parallax-wrapper" data-speed="0.2">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1920&auto=format&fit=crop" 
+                     alt="Fundo Claro App" 
+                     class="w-full h-full object-cover animate-slow-zoom opacity-[0.08] grayscale mix-blend-multiply">
+            </div>
+            <div class="absolute inset-0 bg-[#FFF3E0]/95 z-0"></div>
+            
+            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-smart-yellow rounded-full mix-blend-multiply filter blur-[120px] opacity-30 animate-pulse-slow pointer-events-none z-0"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-16 lg:gap-24">
                     
                     <!-- Left: Text content -->
                     <div class="flex-1 md:pr-12 reveal-left">
-                        <h2 class="text-4xl md:text-5xl lg:text-[4rem] font-black uppercase tracking-tighter mb-10 leading-[1.05] text-white">
-                            Smart Fit App:<br>Seu aliado nos <span class="text-smart-yellow drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">treinos!</span>
+                        <h2 class="text-4xl md:text-5xl lg:text-[4rem] font-black uppercase tracking-tighter mb-10 leading-[1.05] text-smart-dark">
+                            Smart Fit App:<br>Seu aliado nos <span class="text-smart-black underline decoration-smart-yellow decoration-8 underline-offset-4">TREINOS!</span>
                         </h2>
                         
-                        <ul class="space-y-6 mb-12 text-lg md:text-xl font-bold text-gray-300">
+                        <ul class="space-y-6 mb-12 text-lg md:text-xl font-bold text-gray-800">
                             <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
-                                <div class="w-10 h-10 rounded-full bg-smart-yellow/10 border border-smart-yellow/20 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-smart-yellow/30 border border-smart-yellow/40 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
                                     <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
                                 </div>
-                                <span class="group-hover:text-white transition-colors">Confira seu treino personalizado completo</span>
+                                <span class="group-hover:text-smart-dark transition-colors">Confira seu treino personalizado completo</span>
                             </li>
                             <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
-                                <div class="w-10 h-10 rounded-full bg-smart-yellow/10 border border-smart-yellow/20 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-smart-yellow/30 border border-smart-yellow/40 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
                                     <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
                                 </div>
-                                <span class="group-hover:text-white transition-colors">Veja a execução dos exercícios em vídeo</span>
+                                <span class="group-hover:text-smart-dark transition-colors">Veja a execução dos exercícios em vídeo</span>
                             </li>
                             <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
-                                <div class="w-10 h-10 rounded-full bg-smart-yellow/10 border border-smart-yellow/20 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-smart-yellow/30 border border-smart-yellow/40 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
                                     <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
                                 </div>
-                                <span class="group-hover:text-white transition-colors">Acompanhe o progresso de carga</span>
+                                <span class="group-hover:text-smart-dark transition-colors">Acompanhe o progresso de carga</span>
                             </li>
                             <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
-                                <div class="w-10 h-10 rounded-full bg-smart-yellow/10 border border-smart-yellow/20 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-smart-yellow/30 border border-smart-yellow/40 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
                                     <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
                                 </div>
-                                <span class="group-hover:text-white transition-colors">Acesse 60 treinos mesmo se não for aluno</span>
+                                <span class="group-hover:text-smart-dark transition-colors">Acesse 60 treinos mesmo se não for aluno</span>
                             </li>
                             <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
-                                <div class="w-10 h-10 rounded-full bg-smart-yellow/10 border border-smart-yellow/20 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-smart-yellow/30 border border-smart-yellow/40 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
                                     <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
                                 </div>
-                                <span class="group-hover:text-white transition-colors">Compre ou faça upgrade de plano</span>
+                                <span class="group-hover:text-smart-dark transition-colors">Compre ou faça upgrade de plano</span>
                             </li>
                         </ul>
 
-                        <p class="text-2xl font-black text-smart-black mb-8 tracking-wide uppercase bg-smart-yellow inline-block px-5 py-2 rounded-xl shadow-lg">Tudo isso de graça!</p>
+                        <p class="text-2xl font-black text-smart-black mb-8 tracking-wide uppercase bg-smart-yellow inline-block px-5 py-2 rounded-xl shadow-md">Tudo isso de graça!</p>
                     </div>
                     
                     <!-- Right: Phones Mockup -->
