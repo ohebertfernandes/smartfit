@@ -63,10 +63,6 @@
                         slowZoom: {
                             '0%': { transform: 'scale(1.05)' },
                             '100%': { transform: 'scale(1.25)' },
-                        },
-                        slowPan: {
-                            '0%': { transform: 'scale(1.1) translateX(0)' },
-                            '100%': { transform: 'scale(1.1) translateX(-2%)' },
                         }
                     }
                 }
@@ -315,452 +311,542 @@
     <!-- Wrapper para o efeito Parallax Cortina (As secções abaixo cobrem o Hero) -->
     <div class="relative z-10 bg-smart-dark shadow-[0_-20px_50px_rgba(0,0,0,0.9)] rounded-t-[2.5rem] lg:rounded-t-[4rem] overflow-hidden">
 
-    <!-- 2ª Seção - Oferta VIP -->
-    <section id="oferta" class="py-24 bg-smart-dark relative overflow-hidden">
-        <!-- Fundo de Imagem -->
-        <div class="absolute inset-0 w-full h-[140%] -top-[20%] overflow-hidden z-0 parallax-wrapper" data-speed="0.2">
-            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1920&auto=format&fit=crop" 
-                 alt="Fundo Academia" 
-                 class="w-full h-full object-cover animate-slow-zoom opacity-50 grayscale mix-blend-luminosity">
-        </div>
-        
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-b from-[#141414] via-[#141414]/70 to-[#141414] z-0"></div>
-
-        <div class="max-w-4xl mx-auto px-4 relative z-20 text-center">
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-black uppercase text-white mb-6 leading-tight tracking-tighter reveal">
-                Treine na <span class="text-transparent bg-clip-text bg-gradient-to-r from-smart-yellow to-yellow-500 drop-shadow-md">maior rede de academias</span> da América Latina
-            </h2>
-            <p class="text-lg md:text-xl text-gray-200 mb-14 font-medium max-w-2xl mx-auto reveal delay-100">
-                3 dias completos para treinar com acesso total, suporte profissional e acompanhamento real sem custo.
-            </p>
-
-            <!-- Ticket de Oferta Moderno -->
-            <div class="bg-gradient-to-br from-[#2a2a2a] to-[#111] rounded-[2.5rem] p-1 md:p-2 shadow-[0_30px_60px_rgba(0,0,0,0.8)] mx-auto max-w-3xl transform hover:-translate-y-3 transition-all duration-500 reveal delay-200 group">
-                <div class="border border-gray-700 group-hover:border-smart-yellow/40 rounded-[2.3rem] p-8 md:p-14 relative overflow-hidden transition-colors duration-500 bg-[#141414]/90 backdrop-blur-md">
-                    
-                    <!-- Glow effect behind ticket -->
-                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-smart-yellow/10 filter blur-[100px] rounded-full pointer-events-none group-hover:bg-smart-yellow/20 transition-colors duration-700"></div>
-
-                    <div class="absolute top-0 right-0 bg-smart-yellow text-smart-black text-[10px] md:text-xs font-black px-6 py-2.5 rounded-bl-3xl uppercase tracking-widest shadow-md">
-                        Vagas Limitadas na Semana
-                    </div>
-                    
-                    <h3 class="text-3xl md:text-4xl font-black uppercase text-smart-yellow mb-3 tracking-tight drop-shadow-md group-hover:scale-105 transition-transform duration-500">Passaporte VIP</h3>
-                    <p class="text-lg md:text-xl font-bold text-white mb-10 tracking-wide drop-shadow-sm">3 Dias de Acesso Total + Bioimpedância Profissional</p>
-                    
-                    <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12 bg-black/70 backdrop-blur-md py-8 px-6 rounded-3xl border border-white/10 shadow-inner group-hover:border-smart-yellow/20 transition-colors">
-                        <div class="text-center w-full">
-                            <p class="text-xs text-gray-400 font-bold uppercase tracking-widest mb-3 group-hover:text-white transition-colors">Avaliação Corporal Completa</p>
-                            <div class="flex items-center justify-center gap-6">
-                                <span class="text-3xl text-gray-500 line-through font-black">R$ 100</span>
-                                <div class="w-12 h-12 rounded-full bg-smart-yellow/20 flex items-center justify-center shadow-inner group-hover:bg-smart-yellow group-hover:text-black transition-all">
-                                    <i class="ph-bold ph-arrow-right text-smart-yellow group-hover:text-black text-2xl transition-colors"></i>
-                                </div>
-                                <span class="text-6xl md:text-8xl font-black text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">R$ 0</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <ul class="flex flex-wrap justify-center items-center gap-4 md:gap-10 text-sm font-bold text-gray-200 mb-10 uppercase tracking-wider">
-                        <li class="flex items-center gap-2 group/icon hover:text-smart-yellow transition-colors hover:-translate-y-1"><i class="ph-bold ph-check-circle text-smart-yellow text-xl group-hover/icon:scale-125 transition-transform"></i> Sem fidelidade</li>
-                        <li class="flex items-center gap-2 group/icon hover:text-smart-yellow transition-colors hover:-translate-y-1"><i class="ph-bold ph-check-circle text-smart-yellow text-xl group-hover/icon:scale-125 transition-transform"></i> Sem compromisso</li>
-                        <li class="flex items-center gap-2 group/icon hover:text-smart-yellow transition-colors hover:-translate-y-1"><i class="ph-bold ph-check-circle text-smart-yellow text-xl group-hover/icon:scale-125 transition-transform"></i> Sem pressão</li>
-                    </ul>
-
-                    <a href="#inicio" class="btn-shine bg-smart-yellow hover:bg-smart-yellowHover text-smart-black px-10 py-5 rounded-full font-black uppercase tracking-widest text-lg w-full md:w-auto inline-flex items-center justify-center gap-3 transition-transform transform hover:scale-105 shadow-[0_0_40px_rgba(251,186,0,0.4)]">
-                        Liberar meu VIP <i class="ph-bold ph-ticket text-3xl"></i>
-                    </a>
-                </div>
+        <!-- 2ª Seção - Oferta VIP -->
+        <section id="oferta" class="py-24 bg-smart-dark relative overflow-hidden">
+            <!-- Fundo de Imagem -->
+            <div class="absolute inset-0 w-full h-[140%] -top-[20%] overflow-hidden z-0 parallax-wrapper" data-speed="0.2">
+                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1920&auto=format&fit=crop" 
+                     alt="Fundo Academia" 
+                     class="w-full h-full object-cover animate-slow-zoom opacity-50 grayscale mix-blend-luminosity">
             </div>
-        </div>
-    </section>
+            
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-[#141414] via-[#141414]/70 to-[#141414] z-0"></div>
 
-    <!-- 3ª Seção - A Prova da Eficiência (Comparação) -->
-    <section id="diferenciais" class="py-24 bg-smart-black relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-            <div class="text-center mb-20 reveal">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter text-white drop-shadow-md">
-                    Por que escolher a <span class="text-transparent bg-clip-text bg-gradient-to-r from-smart-yellow to-yellow-400">SMART FIT?</span>
+            <div class="max-w-4xl mx-auto px-4 relative z-20 text-center">
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-black uppercase text-white mb-6 leading-tight tracking-tighter reveal">
+                    Treine na <span class="text-transparent bg-clip-text bg-gradient-to-r from-smart-yellow to-yellow-500 drop-shadow-md">maior rede de academias</span> da América Latina
                 </h2>
-            </div>
+                <p class="text-lg md:text-xl text-gray-200 mb-14 font-medium max-w-2xl mx-auto reveal delay-100">
+                    3 dias completos para treinar com acesso total, suporte profissional e acompanhamento real sem custo.
+                </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
-                
-                <!-- Treino Comum -->
-                <div class="bg-[#111]/80 backdrop-blur-xl border border-gray-800 rounded-[2.5rem] p-8 md:p-14 hover:bg-[#111]/95 hover:border-gray-600 hover:-translate-y-2 transition-all duration-500 reveal-left delay-100 group shadow-2xl">
-                    <div class="flex flex-col items-start gap-5 mb-10">
-                        <div class="w-16 h-16 rounded-2xl bg-gray-800/50 flex items-center justify-center border border-gray-700 group-hover:scale-110 transition-transform">
-                            <i class="ph-bold ph-sneaker text-gray-400 text-4xl"></i>
-                        </div>
-                        <h3 class="text-3xl md:text-4xl font-black text-gray-400 uppercase tracking-tight group-hover:text-white transition-colors">Treino Comum</h3>
-                    </div>
-                    <ul class="space-y-7">
-                        <li class="flex items-start gap-5 group/item">
-                            <div class="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover/item:bg-red-500/30 transition-colors">
-                                <i class="ph-bold ph-x text-red-500 text-lg"></i>
-                            </div>
-                            <span class="text-gray-300 font-medium text-lg md:text-xl group-hover/item:text-white transition-colors mt-0.5">Muito esforço, pouca evolução</span>
-                        </li>
-                        <li class="flex items-start gap-5 group/item">
-                            <div class="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover/item:bg-red-500/30 transition-colors">
-                                <i class="ph-bold ph-x text-red-500 text-lg"></i>
-                            </div>
-                            <span class="text-gray-300 font-medium text-lg md:text-xl group-hover/item:text-white transition-colors mt-0.5">Ritmo quebrado o tempo todo</span>
-                        </li>
-                        <li class="flex items-start gap-5 group/item">
-                            <div class="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover/item:bg-red-500/30 transition-colors">
-                                <i class="ph-bold ph-x text-red-500 text-lg"></i>
-                            </div>
-                            <span class="text-gray-300 font-medium text-lg md:text-xl group-hover/item:text-white transition-colors mt-0.5">Resultado inconsistente</span>
-                        </li>
-                        <li class="flex items-start gap-5 group/item">
-                            <div class="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover/item:bg-red-500/30 transition-colors">
-                                <i class="ph-bold ph-x text-red-500 text-lg"></i>
-                            </div>
-                            <span class="text-gray-300 font-medium text-lg md:text-xl group-hover/item:text-white transition-colors mt-0.5">Sem orientação, não sabe o caminho</span>
-                        </li>
-                    </ul>
-                </div>
+                <!-- Ticket de Oferta Moderno -->
+                <div class="bg-gradient-to-br from-[#2a2a2a] to-[#111] rounded-[2.5rem] p-1 md:p-2 shadow-[0_30px_60px_rgba(0,0,0,0.8)] mx-auto max-w-3xl transform hover:-translate-y-3 transition-all duration-500 reveal delay-200 group">
+                    <div class="border border-gray-700 group-hover:border-smart-yellow/40 rounded-[2.3rem] p-8 md:p-14 relative overflow-hidden transition-colors duration-500 bg-[#141414]/90 backdrop-blur-md">
+                        
+                        <!-- Glow effect behind ticket -->
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-smart-yellow/10 filter blur-[100px] rounded-full pointer-events-none group-hover:bg-smart-yellow/20 transition-colors duration-700"></div>
 
-                <!-- Treino Smart Fit -->
-                <div class="bg-gradient-to-b from-[#1a1a1a]/95 to-[#0a0a0a]/95 backdrop-blur-2xl border-2 border-smart-yellow/50 rounded-[2.5rem] p-8 md:p-14 relative transform md:-translate-y-6 shadow-[0_20px_50px_rgba(251,186,0,0.2)] hover:shadow-[0_30px_80px_rgba(251,186,0,0.4)] hover:-translate-y-8 hover:border-smart-yellow transition-all duration-500 reveal-right delay-200 group">
-                    <div class="absolute -top-5 right-10 bg-smart-yellow text-smart-black text-xs font-black px-5 py-2.5 rounded-full uppercase tracking-widest shadow-lg group-hover:scale-110 transition-transform">
-                        Evolução Real
-                    </div>
-                    <div class="flex flex-col items-start gap-5 mb-10">
-                        <div class="w-16 h-16 rounded-2xl bg-smart-yellow flex items-center justify-center shadow-[0_0_30px_rgba(251,186,0,0.5)] group-hover:scale-110 transition-transform">
-                            <i class="ph-bold ph-lightning text-smart-black text-4xl"></i>
-                        </div>
-                        <h3 class="text-3xl md:text-4xl font-black text-white uppercase tracking-tight">Treino SMART FIT</h3>
-                    </div>
-                    <ul class="space-y-7">
-                        <li class="flex items-start gap-5 group/item cursor-default">
-                            <div class="w-8 h-8 rounded-full bg-smart-yellow/20 flex items-center justify-center shrink-0 group-hover/item:bg-smart-yellow transition-colors">
-                                <i class="ph-bold ph-check text-smart-yellow group-hover/item:text-smart-black text-lg transition-colors"></i>
-                            </div>
-                            <span class="text-white font-bold text-lg md:text-xl group-hover/item:text-smart-yellow transition-colors mt-0.5 drop-shadow-sm">Treino fluido e contínuo</span>
-                        </li>
-                        <li class="flex items-start gap-5 group/item cursor-default">
-                            <div class="w-8 h-8 rounded-full bg-smart-yellow/20 flex items-center justify-center shrink-0 group-hover/item:bg-smart-yellow transition-colors">
-                                <i class="ph-bold ph-check text-smart-yellow group-hover/item:text-smart-black text-lg transition-colors"></i>
-                            </div>
-                            <span class="text-white font-bold text-lg md:text-xl group-hover/item:text-smart-yellow transition-colors mt-0.5 drop-shadow-sm">Mais intensidade com menos desgaste</span>
-                        </li>
-                        <li class="flex items-start gap-5 group/item cursor-default">
-                            <div class="w-8 h-8 rounded-full bg-smart-yellow/20 flex items-center justify-center shrink-0 group-hover/item:bg-smart-yellow transition-colors">
-                                <i class="ph-bold ph-check text-smart-yellow group-hover/item:text-smart-black text-lg transition-colors"></i>
-                            </div>
-                            <span class="text-white font-bold text-lg md:text-xl group-hover/item:text-smart-yellow transition-colors mt-0.5 drop-shadow-sm">Evolução visível mais rápida</span>
-                        </li>
-                        <li class="flex items-start gap-5 group/item cursor-default">
-                            <div class="w-8 h-8 rounded-full bg-smart-yellow/20 flex items-center justify-center shrink-0 group-hover/item:bg-smart-yellow transition-colors">
-                                <i class="ph-bold ph-check text-smart-yellow group-hover/item:text-smart-black text-lg transition-colors"></i>
-                            </div>
-                            <span class="text-white font-bold text-lg md:text-xl group-hover/item:text-smart-yellow transition-colors mt-0.5 drop-shadow-sm">Especialistas que ajustam seu treino</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- 4ª Seção - Bem estar (Características) -->
-    <section id="estrutura" class="py-28 bg-smart-dark relative overflow-hidden">
-        <!-- Background Imagem Mais Evidente e com Parallax -->
-        <div class="absolute inset-0 w-full h-[120%] -top-[10%] overflow-hidden z-0 parallax-wrapper" data-speed="0.25">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1920&auto=format&fit=crop" 
-                 alt="Estrutura Academia" 
-    <!-- 5ª Seção - App -->
-    <section id="app" class="bg-[#0a0a0a] text-white py-32 overflow-hidden relative border-t border-gray-900">
-        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-smart-yellow rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-pulse-slow pointer-events-none z-0"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-16 lg:gap-24">
-                
-                <!-- Left: Text content -->
-                <div class="flex-1 md:pr-12 reveal-left">
-                    <h2 class="text-4xl md:text-5xl lg:text-[4rem] font-black uppercase tracking-tighter mb-10 leading-[1.05] text-white">
-                        Smart Fit App:<br>Seu aliado nos <span class="text-smart-yellow drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">treinos!</span>
-                    </h2>
-                    
-                    <ul class="space-y-6 mb-12 text-lg md:text-xl font-bold text-gray-300">
-                        <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
-                            <div class="w-10 h-10 rounded-full bg-smart-yellow/10 border border-smart-yellow/20 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
-                                <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
-                            </div>
-                            <span class="group-hover:text-white transition-colors">Confira seu treino personalizado completo</span>
-                        </li>
-                        <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
-                            <div class="w-10 h-10 rounded-full bg-smart-yellow/10 border border-smart-yellow/20 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
-                                <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
-                            </div>
-                            <span class="group-hover:text-white transition-colors">Veja a execução dos exercícios em vídeo</span>
-                        </li>
-                        <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
-                            <div class="w-10 h-10 rounded-full bg-smart-yellow/10 border border-smart-yellow/20 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
-                                <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
-                            </div>
-                            <span class="group-hover:text-white transition-colors">Acompanhe o progresso de carga</span>
-                        </li>
-                        <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
-                            <div class="w-10 h-10 rounded-full bg-smart-yellow/10 border border-smart-yellow/20 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
-                                <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
-                            </div>
-                            <span class="group-hover:text-white transition-colors">Acesse 60 treinos mesmo se não for aluno</span>
-                        </li>
-                        <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
-                            <div class="w-10 h-10 rounded-full bg-smart-yellow/10 border border-smart-yellow/20 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
-                                <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
-                            </div>
-                            <span class="group-hover:text-white transition-colors">Compre ou faça upgrade de plano</span>
-                        </li>
-                    </ul>
-
-                    <p class="text-2xl font-black text-smart-black mb-8 tracking-wide uppercase bg-smart-yellow inline-block px-5 py-2 rounded-xl shadow-lg">Tudo isso de graça!</p>
-                    <p class="text-gray-400 font-black mb-6 uppercase tracking-wider text-sm">Baixe agora o Smart Fit App</p>
-                    
-                    <div class="flex flex-wrap items-center gap-6">
-                        <!-- QR Code placeholder com animação hover -->
-                        <div class="w-32 h-32 bg-white p-3 border-2 border-gray-200 rounded-3xl shadow-xl shrink-0 hover:scale-110 transition-transform duration-300 cursor-pointer">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://smartfit.com.br/app" alt="QR Code" class="w-full h-full object-contain opacity-90 hover:opacity-100">
+                        <div class="absolute top-0 right-0 bg-smart-yellow text-smart-black text-[10px] md:text-xs font-black px-6 py-2.5 rounded-bl-3xl uppercase tracking-widest shadow-md">
+                            Vagas Limitadas na Semana
                         </div>
                         
-                        <div class="flex flex-col gap-4">
-                            <a href="#" class="bg-[#141414] text-white rounded-2xl px-6 py-4 flex items-center gap-4 hover:bg-black hover:shadow-[0_0_20px_rgba(251,186,0,0.15)] border border-gray-800 hover:border-smart-yellow hover:-translate-y-1 transition-all w-56 group">
-                                <i class="ph-fill ph-google-play-logo text-3xl group-hover:text-smart-yellow transition-colors"></i>
-                                <div class="text-left">
-                                    <p class="text-[10px] uppercase leading-none text-gray-500 font-bold group-hover:text-gray-400">Disponível no</p>
-                                    <p class="text-base font-black leading-none mt-1.5">Google Play</p>
+                        <h3 class="text-3xl md:text-4xl font-black uppercase text-smart-yellow mb-3 tracking-tight drop-shadow-md group-hover:scale-105 transition-transform duration-500">Passaporte VIP</h3>
+                        <p class="text-lg md:text-xl font-bold text-white mb-10 tracking-wide drop-shadow-sm">3 Dias de Acesso Total + Bioimpedância Profissional</p>
+                        
+                        <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12 bg-black/70 backdrop-blur-md py-8 px-6 rounded-3xl border border-white/10 shadow-inner group-hover:border-smart-yellow/20 transition-colors">
+                            <div class="text-center w-full">
+                                <p class="text-xs text-gray-400 font-bold uppercase tracking-widest mb-3 group-hover:text-white transition-colors">Avaliação Corporal Completa</p>
+                                <div class="flex items-center justify-center gap-6">
+                                    <span class="text-3xl text-gray-500 line-through font-black">R$ 100</span>
+                                    <div class="w-12 h-12 rounded-full bg-smart-yellow/20 flex items-center justify-center shadow-inner group-hover:bg-smart-yellow group-hover:text-black transition-all">
+                                        <i class="ph-bold ph-arrow-right text-smart-yellow group-hover:text-black text-2xl transition-colors"></i>
+                                    </div>
+                                    <span class="text-6xl md:text-8xl font-black text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">R$ 0</span>
                                 </div>
-                            </a>
-                            <a href="#" class="bg-[#141414] text-white rounded-2xl px-6 py-4 flex items-center gap-4 hover:bg-black hover:shadow-[0_0_20px_rgba(251,186,0,0.15)] border border-gray-800 hover:border-smart-yellow hover:-translate-y-1 transition-all w-56 group">
-                                <i class="ph-fill ph-apple-logo text-3xl mb-1 group-hover:text-smart-yellow transition-colors"></i>
-                                <div class="text-left">
-                                    <p class="text-[10px] uppercase leading-none text-gray-500 font-bold group-hover:text-gray-400">Baixar na</p>
-                                    <p class="text-base font-black leading-none mt-1.5">App Store</p>
-                                </div>
-                            </a>
+                            </div>
                         </div>
+
+                        <ul class="flex flex-wrap justify-center items-center gap-4 md:gap-10 text-sm font-bold text-gray-200 mb-10 uppercase tracking-wider">
+                            <li class="flex items-center gap-2 group/icon hover:text-smart-yellow transition-colors hover:-translate-y-1"><i class="ph-bold ph-check-circle text-smart-yellow text-xl group-hover/icon:scale-125 transition-transform"></i> Sem fidelidade</li>
+                            <li class="flex items-center gap-2 group/icon hover:text-smart-yellow transition-colors hover:-translate-y-1"><i class="ph-bold ph-check-circle text-smart-yellow text-xl group-hover/icon:scale-125 transition-transform"></i> Sem compromisso</li>
+                            <li class="flex items-center gap-2 group/icon hover:text-smart-yellow transition-colors hover:-translate-y-1"><i class="ph-bold ph-check-circle text-smart-yellow text-xl group-hover/icon:scale-125 transition-transform"></i> Sem pressão</li>
+                        </ul>
+
+                        <a href="#inicio" class="btn-shine bg-smart-yellow hover:bg-smart-yellowHover text-smart-black px-10 py-5 rounded-full font-black uppercase tracking-widest text-lg w-full md:w-auto inline-flex items-center justify-center gap-3 transition-transform transform hover:scale-105 shadow-[0_0_40px_rgba(251,186,0,0.4)]">
+                            Liberar meu VIP <i class="ph-bold ph-ticket text-3xl"></i>
+                        </a>
                     </div>
                 </div>
-                
-                <!-- Right: Phones Mockup -->
-                <div class="flex-1 relative mt-16 md:mt-0 flex justify-center md:justify-end reveal-right">
-                    <!-- Fundo amarelo (Shape Orgânico) -->
-                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-smart-yellow rounded-[4rem] rotate-6 z-0 shadow-[0_20px_50px_rgba(251,186,0,0.2)] transition-transform duration-700 hover:rotate-12 hover:scale-105"></div>
+            </div>
+        </section>
+
+        <!-- 3ª Seção - A Prova da Eficiência (Comparação) -->
+        <section id="diferenciais" class="py-24 bg-smart-black relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter text-white drop-shadow-md">
+                        Por que escolher a <span class="text-transparent bg-clip-text bg-gradient-to-r from-smart-yellow to-yellow-400">SMART FIT?</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
                     
-                    <!-- Celular Principal -->
-                    <div class="relative w-[300px] h-[620px] phone-mockup z-20 animate-float shadow-[0_40px_80px_rgba(0,0,0,0.5)] hover:shadow-[0_50px_100px_rgba(0,0,0,0.6)]">
-                        <!-- Notch -->
-                        <div class="absolute top-0 inset-x-0 h-7 flex justify-center z-30">
-                            <div class="w-36 h-7 bg-[#141414] rounded-b-3xl"></div>
-                        </div>
-                        <!-- Tela -->
-                        <div class="absolute inset-0 bg-white z-20 flex flex-col">
-                            <div class="h-24 bg-white border-b flex items-end pb-4 px-6 font-black text-xl tracking-tight"><i class="ph-bold ph-arrow-left mr-4"></i> TREINO A</div>
-                            <div class="p-6 space-y-5 overflow-hidden flex-1 bg-gray-50">
-                                <h3 class="font-black text-2xl text-smart-dark mb-4">Pernas, Ombro</h3>
-                                
-                                <!-- Card Exercício -->
-                                <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 hover:border-smart-yellow hover:shadow-md transition-all cursor-pointer group">
-                                    <div class="w-6 h-6 border-2 border-gray-300 rounded-md bg-white shrink-0 group-hover:border-smart-yellow transition-colors"></div>
-                                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-blue-100 transition-colors"><i class="ph-fill ph-heartbeat text-blue-500 text-2xl"></i></div>
-                                    <div><p class="font-bold text-sm text-smart-dark">Cardio - Esteira</p><p class="text-xs font-semibold text-gray-500 mt-1">20 min</p></div>
-                                </div>
-
-                                <!-- Card Exercício -->
-                                <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 hover:border-smart-yellow hover:shadow-md transition-all cursor-pointer group">
-                                    <div class="w-6 h-6 border-2 border-gray-300 rounded-md bg-white shrink-0 group-hover:border-smart-yellow transition-colors"></div>
-                                    <div class="w-14 h-14 bg-gray-200 rounded-xl bg-cover shrink-0" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=100')"></div>
-                                    <div><p class="font-bold text-sm text-smart-dark">Cadeira Extensora</p><p class="text-xs font-semibold text-gray-500 mt-1">4x 10 a 15</p></div>
-                                </div>
-
-                                <!-- Card Exercício -->
-                                <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 hover:border-smart-yellow hover:shadow-md transition-all cursor-pointer group">
-                                    <div class="w-6 h-6 border-2 border-gray-300 rounded-md bg-white shrink-0 group-hover:border-smart-yellow transition-colors"></div>
-                                    <div class="w-14 h-14 bg-gray-200 rounded-xl bg-cover shrink-0" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=100')"></div>
-                                    <div><p class="font-bold text-sm text-smart-dark">Agachamento Smith</p><p class="text-xs font-semibold text-gray-500 mt-1">4x 10 a 10</p></div>
-                                </div>
+                    <!-- Treino Comum -->
+                    <div class="bg-[#111]/80 backdrop-blur-xl border border-gray-800 rounded-[2.5rem] p-8 md:p-14 hover:bg-[#111]/95 hover:border-gray-600 hover:-translate-y-2 transition-all duration-500 reveal-left delay-100 group shadow-2xl">
+                        <div class="flex flex-col items-start gap-5 mb-10">
+                            <div class="w-16 h-16 rounded-2xl bg-gray-800/50 flex items-center justify-center border border-gray-700 group-hover:scale-110 transition-transform">
+                                <i class="ph-bold ph-sneaker text-gray-400 text-4xl"></i>
                             </div>
+                            <h3 class="text-3xl md:text-4xl font-black text-gray-400 uppercase tracking-tight group-hover:text-white transition-colors">Treino Comum</h3>
+                        </div>
+                        <ul class="space-y-7">
+                            <li class="flex items-start gap-5 group/item">
+                                <div class="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover/item:bg-red-500/30 transition-colors">
+                                    <i class="ph-bold ph-x text-red-500 text-lg"></i>
+                                </div>
+                                <span class="text-gray-300 font-medium text-lg md:text-xl group-hover/item:text-white transition-colors mt-0.5">Muito esforço, pouca evolução</span>
+                            </li>
+                            <li class="flex items-start gap-5 group/item">
+                                <div class="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover/item:bg-red-500/30 transition-colors">
+                                    <i class="ph-bold ph-x text-red-500 text-lg"></i>
+                                </div>
+                                <span class="text-gray-300 font-medium text-lg md:text-xl group-hover/item:text-white transition-colors mt-0.5">Ritmo quebrado o tempo todo</span>
+                            </li>
+                            <li class="flex items-start gap-5 group/item">
+                                <div class="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover/item:bg-red-500/30 transition-colors">
+                                    <i class="ph-bold ph-x text-red-500 text-lg"></i>
+                                </div>
+                                <span class="text-gray-300 font-medium text-lg md:text-xl group-hover/item:text-white transition-colors mt-0.5">Resultado inconsistente</span>
+                            </li>
+                            <li class="flex items-start gap-5 group/item">
+                                <div class="w-8 h-8 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 group-hover/item:bg-red-500/30 transition-colors">
+                                    <i class="ph-bold ph-x text-red-500 text-lg"></i>
+                                </div>
+                                <span class="text-gray-300 font-medium text-lg md:text-xl group-hover/item:text-white transition-colors mt-0.5">Sem orientação, não sabe o caminho</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Treino Smart Fit -->
+                    <div class="bg-gradient-to-b from-[#1a1a1a]/95 to-[#0a0a0a]/95 backdrop-blur-2xl border-2 border-smart-yellow/50 rounded-[2.5rem] p-8 md:p-14 relative transform md:-translate-y-6 shadow-[0_20px_50px_rgba(251,186,0,0.2)] hover:shadow-[0_30px_80px_rgba(251,186,0,0.4)] hover:-translate-y-8 hover:border-smart-yellow transition-all duration-500 reveal-right delay-200 group">
+                        <div class="absolute -top-5 right-10 bg-smart-yellow text-smart-black text-xs font-black px-5 py-2.5 rounded-full uppercase tracking-widest shadow-lg group-hover:scale-110 transition-transform">
+                            Evolução Real
+                        </div>
+                        <div class="flex flex-col items-start gap-5 mb-10">
+                            <div class="w-16 h-16 rounded-2xl bg-smart-yellow flex items-center justify-center shadow-[0_0_30px_rgba(251,186,0,0.5)] group-hover:scale-110 transition-transform">
+                                <i class="ph-bold ph-lightning text-smart-black text-4xl"></i>
+                            </div>
+                            <h3 class="text-3xl md:text-4xl font-black text-white uppercase tracking-tight">Treino SMART FIT</h3>
+                        </div>
+                        <ul class="space-y-7">
+                            <li class="flex items-start gap-5 group/item cursor-default">
+                                <div class="w-8 h-8 rounded-full bg-smart-yellow/20 flex items-center justify-center shrink-0 group-hover/item:bg-smart-yellow transition-colors">
+                                    <i class="ph-bold ph-check text-smart-yellow group-hover/item:text-smart-black text-lg transition-colors"></i>
+                                </div>
+                                <span class="text-white font-bold text-lg md:text-xl group-hover/item:text-smart-yellow transition-colors mt-0.5 drop-shadow-sm">Treino fluido e contínuo</span>
+                            </li>
+                            <li class="flex items-start gap-5 group/item cursor-default">
+                                <div class="w-8 h-8 rounded-full bg-smart-yellow/20 flex items-center justify-center shrink-0 group-hover/item:bg-smart-yellow transition-colors">
+                                    <i class="ph-bold ph-check text-smart-yellow group-hover/item:text-smart-black text-lg transition-colors"></i>
+                                </div>
+                                <span class="text-white font-bold text-lg md:text-xl group-hover/item:text-smart-yellow transition-colors mt-0.5 drop-shadow-sm">Mais intensidade com menos desgaste</span>
+                            </li>
+                            <li class="flex items-start gap-5 group/item cursor-default">
+                                <div class="w-8 h-8 rounded-full bg-smart-yellow/20 flex items-center justify-center shrink-0 group-hover/item:bg-smart-yellow transition-colors">
+                                    <i class="ph-bold ph-check text-smart-yellow group-hover/item:text-smart-black text-lg transition-colors"></i>
+                                </div>
+                                <span class="text-white font-bold text-lg md:text-xl group-hover/item:text-smart-yellow transition-colors mt-0.5 drop-shadow-sm">Evolução visível mais rápida</span>
+                            </li>
+                            <li class="flex items-start gap-5 group/item cursor-default">
+                                <div class="w-8 h-8 rounded-full bg-smart-yellow/20 flex items-center justify-center shrink-0 group-hover/item:bg-smart-yellow transition-colors">
+                                    <i class="ph-bold ph-check text-smart-yellow group-hover/item:text-smart-black text-lg transition-colors"></i>
+                                </div>
+                                <span class="text-white font-bold text-lg md:text-xl group-hover/item:text-smart-yellow transition-colors mt-0.5 drop-shadow-sm">Especialistas que ajustam seu treino</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4ª Seção - Bem estar (Características) -->
+        <section id="estrutura" class="py-28 bg-smart-dark relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+                <div class="text-center mb-24 reveal">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter text-white mb-6 drop-shadow-lg">
+                        Não é só sobre esforço!<br><span class="text-smart-yellow drop-shadow-md">É sobre bem-estar!</span>
+                    </h2>
+                    <p class="text-gray-200 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed drop-shadow-md">Tudo foi pensado para que sua experiência seja impecável do momento que você entra até a hora de sair.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item 1 -->
+                    <div class="p-10 rounded-[2.5rem] bg-[#141414]/80 backdrop-blur-xl hover:bg-[#1a1a1a]/95 hover:-translate-y-3 border border-gray-800 hover:border-smart-yellow/50 transition-all duration-500 group reveal delay-100 shadow-[0_15px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_rgba(251,186,0,0.15)]">
+                        <div class="w-16 h-16 rounded-2xl bg-smart-yellow/10 text-smart-yellow flex items-center justify-center text-4xl mb-8 group-hover:scale-110 group-hover:bg-smart-yellow group-hover:text-smart-black transition-all duration-300 shadow-inner">
+                            <i class="ph-bold ph-thermometer-cold"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white uppercase mb-2 tracking-wide">Ambiente Controlado</h3>
+                        <p class="font-black text-smart-yellow mb-4 text-xs tracking-widest uppercase opacity-90">Treine com conforto</p>
+                        <p class="text-base text-gray-300 group-hover:text-white transition-colors leading-relaxed font-medium">Academia 100% climatizada para manter seu desempenho alto, sem queda por calor ou desconforto.</p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="p-10 rounded-[2.5rem] bg-[#141414]/80 backdrop-blur-xl hover:bg-[#1a1a1a]/95 hover:-translate-y-3 border border-gray-800 hover:border-smart-yellow/50 transition-all duration-500 group reveal delay-200 shadow-[0_15px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_rgba(251,186,0,0.15)]">
+                        <div class="w-16 h-16 rounded-2xl bg-smart-yellow/10 text-smart-yellow flex items-center justify-center text-4xl mb-8 group-hover:scale-110 group-hover:bg-smart-yellow group-hover:text-smart-black transition-all duration-300 shadow-inner">
+                            <i class="ph-bold ph-barbell"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white uppercase mb-2 tracking-wide">Equipamentos Premium</h3>
+                        <p class="font-black text-smart-yellow mb-4 text-xs tracking-widest uppercase opacity-90">Sem improviso</p>
+                        <p class="text-base text-gray-300 group-hover:text-white transition-colors leading-relaxed font-medium">Maquinário importado (Life Fitness e Matrix), com manutenção constante para você treinar com segurança e performance.</p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="p-10 rounded-[2.5rem] bg-[#141414]/80 backdrop-blur-xl hover:bg-[#1a1a1a]/95 hover:-translate-y-3 border border-gray-800 hover:border-smart-yellow/50 transition-all duration-500 group reveal delay-300 shadow-[0_15px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_rgba(251,186,0,0.15)]">
+                        <div class="w-16 h-16 rounded-2xl bg-smart-yellow/10 text-smart-yellow flex items-center justify-center text-4xl mb-8 group-hover:scale-110 group-hover:bg-smart-yellow group-hover:text-smart-black transition-all duration-300 shadow-inner">
+                            <i class="ph-bold ph-target"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white uppercase mb-2 tracking-wide">Suporte Profissional</h3>
+                        <p class="font-black text-smart-yellow mb-4 text-xs tracking-widest uppercase opacity-90">Você não treina sozinho</p>
+                        <p class="text-base text-gray-300 group-hover:text-white transition-colors leading-relaxed font-medium">Professores formados disponíveis e sistema Smart Help para te orientar sempre que precisar.</p>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="p-10 rounded-[2.5rem] bg-[#141414]/80 backdrop-blur-xl hover:bg-[#1a1a1a]/95 hover:-translate-y-3 border border-gray-800 hover:border-smart-yellow/50 transition-all duration-500 group reveal delay-100 shadow-[0_15px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_rgba(251,186,0,0.15)]">
+                        <div class="w-16 h-16 rounded-2xl bg-smart-yellow/10 text-smart-yellow flex items-center justify-center text-4xl mb-8 group-hover:scale-110 group-hover:bg-smart-yellow group-hover:text-smart-black transition-all duration-300 shadow-inner">
+                            <i class="ph-bold ph-chart-line-up"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white uppercase mb-2 tracking-wide">Evolução Acompanhada</h3>
+                        <p class="font-black text-smart-yellow mb-4 text-xs tracking-widest uppercase opacity-90">Resultado medido</p>
+                        <p class="text-base text-gray-300 group-hover:text-white transition-colors leading-relaxed font-medium">Bioimpedância de alta precisão para acompanhar sua evolução corporal com dados reais.</p>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="p-10 rounded-[2.5rem] bg-[#141414]/80 backdrop-blur-xl hover:bg-[#1a1a1a]/95 hover:-translate-y-3 border border-gray-800 hover:border-smart-yellow/50 transition-all duration-500 group reveal delay-200 shadow-[0_15px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_rgba(251,186,0,0.15)]">
+                        <div class="w-16 h-16 rounded-2xl bg-smart-yellow/10 text-smart-yellow flex items-center justify-center text-4xl mb-8 group-hover:scale-110 group-hover:bg-smart-yellow group-hover:text-smart-black transition-all duration-300 shadow-inner">
+                            <i class="ph-bold ph-armchair"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white uppercase mb-2 tracking-wide">Recuperação e Performance</h3>
+                        <p class="font-black text-smart-yellow mb-4 text-xs tracking-widest uppercase opacity-90">Corpo preparado</p>
+                        <p class="text-base text-gray-300 group-hover:text-white transition-colors leading-relaxed font-medium">Cadeiras de massagem premium para acelerar a recuperação muscular e reduzir o desgaste físico.</p>
+                    </div>
+
+                    <!-- Item 6 (Combinado) -->
+                    <div class="p-10 rounded-[2.5rem] bg-[#141414]/80 backdrop-blur-xl hover:bg-[#1a1a1a]/95 hover:-translate-y-3 border border-gray-800 hover:border-smart-yellow/50 transition-all duration-500 group reveal delay-300 grid grid-rows-2 gap-8 shadow-[0_15px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_rgba(251,186,0,0.15)]">
+                        <div class="flex flex-col justify-center">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 rounded-xl bg-smart-yellow/10 text-smart-yellow flex items-center justify-center text-2xl group-hover:bg-smart-yellow group-hover:text-smart-black transition-colors shadow-inner">
+                                    <i class="ph-bold ph-globe"></i>
+                                </div>
+                                <h3 class="text-xl font-black text-white uppercase tracking-wide">Flexibilidade</h3>
+                            </div>
+                            <p class="text-sm text-gray-300 group-hover:text-white transition-colors leading-relaxed font-medium">Acesso a múltiplas unidades para manter a constância onde você estiver.</p>
+                        </div>
+                        <div class="flex flex-col justify-center border-t border-gray-700 pt-8">
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-12 h-12 rounded-xl bg-smart-yellow/10 text-smart-yellow flex items-center justify-center text-2xl group-hover:bg-smart-yellow group-hover:text-smart-black transition-colors shadow-inner">
+                                    <i class="ph-bold ph-users"></i>
+                                </div>
+                                <h3 class="text-xl font-black text-white uppercase tracking-wide">Social</h3>
+                            </div>
+                            <p class="text-sm text-gray-300 group-hover:text-white transition-colors leading-relaxed font-medium">Leve convidados para treinar com você e aumente sua frequência com disciplina.</p>
                         </div>
                     </div>
 
-                    <!-- Celular de trás -->
-                    <div class="absolute top-12 -right-8 lg:-right-20 w-[280px] h-[550px] phone-mockup z-10 transform scale-90 opacity-95 hidden sm:block animate-float-delayed shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
-                        <div class="absolute top-0 inset-x-0 h-6 flex justify-center z-30">
-                            <div class="w-32 h-6 bg-[#141414] rounded-b-2xl"></div>
-                        </div>
-                        <div class="absolute inset-0 bg-white z-20 flex flex-col">
-                            <div class="h-40 bg-[#111] flex items-end pb-5 px-6 text-white relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity">
-                                <span class="relative z-10 font-black text-2xl tracking-tighter">MEU TREINO</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5ª Seção - App -->
+        <section id="app" class="bg-[#FFF3E0] text-[#1a1a1a] py-32 overflow-hidden relative">
+            <!-- Background Imagem Dinâmica e Overlay Claro -->
+            <div class="absolute inset-0 w-full h-[140%] -top-[20%] overflow-hidden z-0 parallax-wrapper" data-speed="0.2">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1920&auto=format&fit=crop" 
+                     alt="Fundo Claro App" 
+                     class="w-full h-full object-cover animate-slow-zoom opacity-[0.08] grayscale mix-blend-multiply">
+            </div>
+            <div class="absolute inset-0 bg-[#FFF3E0]/95 z-0"></div>
+            
+            <!-- Blob amarelo suave de fundo -->
+            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-smart-yellow rounded-full mix-blend-multiply filter blur-[120px] opacity-30 animate-pulse-slow pointer-events-none z-0"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-16 lg:gap-24">
+                    
+                    <!-- Left: Text content -->
+                    <div class="flex-1 md:pr-12 reveal-left">
+                        <h2 class="text-4xl md:text-5xl lg:text-[4rem] font-black uppercase tracking-tighter mb-10 leading-[1.05] text-smart-dark">
+                            Smart Fit App:<br>Seu aliado nos <span class="text-smart-yellow drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">treinos!</span>
+                        </h2>
+                        
+                        <ul class="space-y-6 mb-12 text-lg md:text-xl font-bold text-gray-800">
+                            <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
+                                <div class="w-10 h-10 rounded-full bg-smart-yellow/30 border border-smart-yellow/40 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
+                                    <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
+                                </div>
+                                <span class="group-hover:text-smart-dark transition-colors">Confira seu treino personalizado completo</span>
+                            </li>
+                            <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
+                                <div class="w-10 h-10 rounded-full bg-smart-yellow/30 border border-smart-yellow/40 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
+                                    <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
+                                </div>
+                                <span class="group-hover:text-smart-dark transition-colors">Veja a execução dos exercícios em vídeo</span>
+                            </li>
+                            <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
+                                <div class="w-10 h-10 rounded-full bg-smart-yellow/30 border border-smart-yellow/40 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
+                                    <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
+                                </div>
+                                <span class="group-hover:text-smart-dark transition-colors">Acompanhe o progresso de carga</span>
+                            </li>
+                            <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
+                                <div class="w-10 h-10 rounded-full bg-smart-yellow/30 border border-smart-yellow/40 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
+                                    <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
+                                </div>
+                                <span class="group-hover:text-smart-dark transition-colors">Acesse 60 treinos mesmo se não for aluno</span>
+                            </li>
+                            <li class="flex items-center gap-5 group cursor-default hover:translate-x-2 transition-transform">
+                                <div class="w-10 h-10 rounded-full bg-smart-yellow/30 border border-smart-yellow/40 flex items-center justify-center shrink-0 group-hover:bg-smart-yellow transition-colors shadow-sm">
+                                    <i class="ph-bold ph-check text-smart-yellow group-hover:text-smart-black text-xl"></i>
+                                </div>
+                                <span class="group-hover:text-smart-dark transition-colors">Compre ou faça upgrade de plano</span>
+                            </li>
+                        </ul>
+
+                        <p class="text-2xl font-black text-smart-dark mb-8 tracking-wide uppercase bg-smart-yellow inline-block px-5 py-2 rounded-xl shadow-md">Tudo isso de graça!</p>
+                        <p class="text-gray-700 font-black mb-6 uppercase tracking-wider text-sm">Baixe agora o Smart Fit App</p>
+                        
+                        <div class="flex flex-wrap items-center gap-6">
+                            <!-- QR Code placeholder com animação hover -->
+                            <div class="w-32 h-32 bg-white p-3 border-2 border-gray-200 rounded-3xl shadow-xl shrink-0 hover:scale-110 transition-transform duration-300 cursor-pointer">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://smartfit.com.br/app" alt="QR Code" class="w-full h-full object-contain opacity-90 hover:opacity-100">
                             </div>
-                            <div class="p-6 bg-gray-50 flex-1">
-                                <p class="text-xs font-black text-gray-500 mb-3 uppercase tracking-widest">Progresso</p>
-                                <div class="w-full bg-gray-200 h-3 rounded-full mb-2 overflow-hidden">
-                                    <div class="bg-smart-yellow w-1/2 h-full rounded-full relative">
-                                        <div class="absolute inset-0 bg-white/30 animate-[shine_2s_infinite]"></div>
+                            
+                            <div class="flex flex-col gap-4">
+                                <a href="#" class="bg-[#111] text-white rounded-2xl px-6 py-4 flex items-center gap-4 hover:bg-black hover:shadow-2xl hover:-translate-y-1 transition-all w-56 group">
+                                    <i class="ph-fill ph-google-play-logo text-3xl group-hover:text-smart-yellow transition-colors"></i>
+                                    <div class="text-left">
+                                        <p class="text-[10px] uppercase leading-none text-gray-400 font-bold group-hover:text-gray-300">Disponível no</p>
+                                        <p class="text-base font-black leading-none mt-1.5">Google Play</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="bg-[#111] text-white rounded-2xl px-6 py-4 flex items-center gap-4 hover:bg-black hover:shadow-2xl hover:-translate-y-1 transition-all w-56 group">
+                                    <i class="ph-fill ph-apple-logo text-3xl mb-1 group-hover:text-smart-yellow transition-colors"></i>
+                                    <div class="text-left">
+                                        <p class="text-[10px] uppercase leading-none text-gray-400 font-bold group-hover:text-gray-300">Baixar na</p>
+                                        <p class="text-base font-black leading-none mt-1.5">App Store</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Phones Mockup -->
+                    <div class="flex-1 relative mt-16 md:mt-0 flex justify-center md:justify-end reveal-right">
+                        <!-- Fundo amarelo (Shape Orgânico) -->
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-smart-yellow rounded-[4rem] rotate-6 z-0 shadow-[0_20px_50px_rgba(251,186,0,0.5)] transition-transform duration-700 hover:rotate-12 hover:scale-105"></div>
+                        
+                        <!-- Celular Principal -->
+                        <div class="relative w-[300px] h-[620px] phone-mockup z-20 animate-float shadow-[0_40px_80px_rgba(0,0,0,0.5)] hover:shadow-[0_50px_100px_rgba(0,0,0,0.6)]">
+                            <!-- Notch -->
+                            <div class="absolute top-0 inset-x-0 h-7 flex justify-center z-30">
+                                <div class="w-36 h-7 bg-[#141414] rounded-b-3xl"></div>
+                            </div>
+                            <!-- Tela -->
+                            <div class="absolute inset-0 bg-white z-20 flex flex-col">
+                                <div class="h-24 bg-white border-b flex items-end pb-4 px-6 font-black text-xl tracking-tight"><i class="ph-bold ph-arrow-left mr-4"></i> TREINO A</div>
+                                <div class="p-6 space-y-5 overflow-hidden flex-1 bg-gray-50">
+                                    <h3 class="font-black text-2xl text-smart-dark mb-4">Pernas, Ombro</h3>
+                                    
+                                    <!-- Card Exercício -->
+                                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 hover:border-smart-yellow hover:shadow-md transition-all cursor-pointer group">
+                                        <div class="w-6 h-6 border-2 border-gray-300 rounded-md bg-white shrink-0 group-hover:border-smart-yellow transition-colors"></div>
+                                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-blue-100 transition-colors"><i class="ph-fill ph-heartbeat text-blue-500 text-2xl"></i></div>
+                                        <div><p class="font-bold text-sm text-smart-dark">Cardio - Esteira</p><p class="text-xs font-semibold text-gray-500 mt-1">20 min</p></div>
+                                    </div>
+
+                                    <!-- Card Exercício -->
+                                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 hover:border-smart-yellow hover:shadow-md transition-all cursor-pointer group">
+                                        <div class="w-6 h-6 border-2 border-gray-300 rounded-md bg-white shrink-0 group-hover:border-smart-yellow transition-colors"></div>
+                                        <div class="w-14 h-14 bg-gray-200 rounded-xl bg-cover shrink-0" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=100')"></div>
+                                        <div><p class="font-bold text-sm text-smart-dark">Cadeira Extensora</p><p class="text-xs font-semibold text-gray-500 mt-1">4x 10 a 15</p></div>
+                                    </div>
+
+                                    <!-- Card Exercício -->
+                                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-gray-100 hover:border-smart-yellow hover:shadow-md transition-all cursor-pointer group">
+                                        <div class="w-6 h-6 border-2 border-gray-300 rounded-md bg-white shrink-0 group-hover:border-smart-yellow transition-colors"></div>
+                                        <div class="w-14 h-14 bg-gray-200 rounded-xl bg-cover shrink-0" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=100')"></div>
+                                        <div><p class="font-bold text-sm text-smart-dark">Agachamento Smith</p><p class="text-xs font-semibold text-gray-500 mt-1">4x 10 a 10</p></div>
                                     </div>
                                 </div>
-                                <div class="flex justify-between text-sm font-black mb-8 text-smart-dark"><span>50%</span><span class="text-gray-400">Sessões: 9/18</span></div>
-                                
-                                <div class="bg-smart-dark text-white rounded-2xl p-5 flex justify-between items-center relative overflow-hidden shadow-xl hover:scale-[1.05] transition-transform cursor-pointer">
-                                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=300" class="absolute inset-0 w-full h-full object-cover opacity-20">
-                                    <span class="relative z-10 font-bold text-sm">Acessar meu treino</span>
-                                    <i class="ph-bold ph-arrow-right relative z-10 text-smart-yellow text-xl"></i>
+                            </div>
+                        </div>
+
+                        <!-- Celular de trás -->
+                        <div class="absolute top-12 -right-8 lg:-right-20 w-[280px] h-[550px] phone-mockup z-10 transform scale-90 opacity-95 hidden sm:block animate-float-delayed shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
+                            <div class="absolute top-0 inset-x-0 h-6 flex justify-center z-30">
+                                <div class="w-32 h-6 bg-[#141414] rounded-b-2xl"></div>
+                            </div>
+                            <div class="absolute inset-0 bg-white z-20 flex flex-col">
+                                <div class="h-40 bg-[#111] flex items-end pb-5 px-6 text-white relative overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity">
+                                    <span class="relative z-10 font-black text-2xl tracking-tighter">MEU TREINO</span>
+                                </div>
+                                <div class="p-6 bg-gray-50 flex-1">
+                                    <p class="text-xs font-black text-gray-500 mb-3 uppercase tracking-widest">Progresso</p>
+                                    <div class="w-full bg-gray-200 h-3 rounded-full mb-2 overflow-hidden">
+                                        <div class="bg-smart-yellow w-1/2 h-full rounded-full relative">
+                                            <div class="absolute inset-0 bg-white/30 animate-[shine_2s_infinite]"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between text-sm font-black mb-8 text-smart-dark"><span>50%</span><span class="text-gray-400">Sessões: 9/18</span></div>
+                                    
+                                    <div class="bg-smart-dark text-white rounded-2xl p-5 flex justify-between items-center relative overflow-hidden shadow-xl hover:scale-[1.05] transition-transform cursor-pointer">
+                                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=300" class="absolute inset-0 w-full h-full object-cover opacity-20">
+                                        <span class="relative z-10 font-bold text-sm">Acessar meu treino</span>
+                                        <i class="ph-bold ph-arrow-right relative z-10 text-smart-yellow text-xl"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- 6ª Seção - Prova Social -->
-    <section id="depoimentos" class="py-32 bg-[#0a0a0a] text-white relative overflow-hidden">
-        <div class="absolute inset-0 w-full h-[140%] -top-[20%] overflow-hidden z-0 parallax-wrapper" data-speed="0.25">
-            <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1920&auto=format&fit=crop" 
-                 alt="Fundo Prova Social" 
-                 class="w-full h-full object-cover animate-slow-zoom opacity-40 grayscale mix-blend-luminosity">
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/95 z-0"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
-            <h2 class="text-4xl md:text-5xl lg:text-[4rem] font-black uppercase tracking-tighter text-white mb-6 reveal leading-[1.05]">
-                QUEM COMEÇA,<br>
-                <span class="text-smart-yellow drop-shadow-[0_0_10px_rgba(251,186,0,0.3)]">PERCEBE A DIFERENÇA RÁPIDO.</span>
-            </h2>
-            <p class="text-xl md:text-2xl text-gray-300 mb-20 font-medium reveal delay-100 max-w-3xl mx-auto drop-shadow-md">
-                Veja o que alunos estão dizendo depois de treinar com a SMART FIT
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-24">
-                <!-- Video 1 -->
-                <div onclick="toggleVideoSound(this)" class="rounded-[2.5rem] overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_20px_50px_rgba(0,0,0,0.9)] hover:shadow-[0_30px_60px_rgba(251,186,0,0.3)] hover:-translate-y-4 transition-all duration-500 reveal delay-100 border-2 border-gray-800 hover:border-smart-yellow">
-                    <video src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/29185ff7ca32e0c26f6564299564cc861d0b70b0/smartfit.piracicaba_1759241176_3733106420138181486_66308969593_1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"></video>
-                    
-                    <!-- Indicador de Som Nativo (Reels/TikTok) -->
-                    <div class="sound-btn w-12 h-12 bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center absolute top-5 right-5 text-white transition-all duration-300 z-30 group-hover:bg-smart-yellow group-hover:text-smart-black shadow-lg">
-                        <i class="ph-fill ph-speaker-slash text-2xl"></i>
-                    </div>
-
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-95 group-hover:opacity-100 transition-opacity">
-                        <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <div class="flex items-center gap-4 mb-3">
-                                <div class="w-12 h-12 rounded-full bg-gray-300 border-2 border-smart-yellow overflow-hidden shadow-lg shrink-0">
-                                    <img src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/refs/heads/main/503655947_17900195223209594_454523243514480896_n.jpg" alt="User" class="w-full h-full object-cover">
-                                </div>
-                                <span class="text-white font-black text-sm uppercase tracking-wider drop-shadow-md">@smartfit.piracicaba</span>
-                            </div>
-                            <div onclick="event.stopPropagation();" class="text-left w-full cursor-default">
-                                <p class="text-gray-100 text-sm font-medium leading-relaxed drop-shadow-lg line-clamp-2 transition-all duration-300">
-                                    Já experimentou uma aula de Smart Bike na nossa nova unidade? Se você curte cardio com intensidade, música animada e muita energia, essa é a experiência perfeita. 🚴‍♀️ O Élcio, nosso aluno há 10 anos, contou como é viver essa vibe e ser Smart. Porque aqui, queimar calorias é sinônimo de diversão! 💛 Temos vários horários ao longo da semana — é só conferir nos destaques. Bora pedalar com a gente na nova Smart Fit Piracicaba?
-                                </p>
-                                <button onclick="toggleCaption(this)" class="text-blue-400 hover:text-blue-300 text-sm font-bold mt-1 drop-shadow-md cursor-pointer inline-block">mais</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Video 2 -->
-                <div onclick="toggleVideoSound(this)" class="rounded-[2.5rem] overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_20px_50px_rgba(0,0,0,0.9)] hover:shadow-[0_30px_60px_rgba(251,186,0,0.3)] hover:-translate-y-4 transition-all duration-500 reveal delay-200 border-2 border-gray-800 hover:border-smart-yellow md:-translate-y-8 md:hover:-translate-y-12">
-                    <video src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/29185ff7ca32e0c26f6564299564cc861d0b70b0/smartfit.piracicaba_1759406055_3734490082683456730_66308969593_1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"></video>
-                    
-                    <!-- Indicador de Som Nativo (Reels/TikTok) -->
-                    <div class="sound-btn w-12 h-12 bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center absolute top-5 right-5 text-white transition-all duration-300 z-30 group-hover:bg-smart-yellow group-hover:text-smart-black shadow-lg">
-                        <i class="ph-fill ph-speaker-slash text-2xl"></i>
-                    </div>
-
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-95 group-hover:opacity-100 transition-opacity">
-                        <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <div class="flex items-center gap-4 mb-3">
-                                <div class="w-12 h-12 rounded-full bg-gray-300 border-2 border-smart-yellow overflow-hidden shadow-lg shrink-0">
-                                    <img src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/refs/heads/main/503655947_17900195223209594_454523243514480896_n.jpg" alt="User" class="w-full h-full object-cover">
-                                </div>
-                                <span class="text-white font-black text-sm uppercase tracking-wider drop-shadow-md">@smartfit.piracicaba</span>
-                            </div>
-                            <div onclick="event.stopPropagation();" class="text-left w-full cursor-default">
-                                <p class="text-gray-100 text-sm font-medium leading-relaxed drop-shadow-lg line-clamp-2 transition-all duration-300">
-                                    Bora, dançar? As aulas de Fitdance na Smart Fit Piracicaba são pura explosão de energia! É treino, é festa, é música contagiante que faz o corpo e a mente vibrarem. A Eva, nossa aluna há 2 anos, já vive essa experiência — e agora, na nova unidade Vila Rezende em Piracicaba, tudo que era bom ficou muito melhor! Quer treinar, dançar e se divertir em Piracicaba? Confira os horários de Fitdance da unidade Vila Rezende nos nossos destaques e vem com a gente!
-                                </p>
-                                <button onclick="toggleCaption(this)" class="text-blue-400 hover:text-blue-300 text-sm font-bold mt-1 drop-shadow-md cursor-pointer inline-block">mais</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Video 3 -->
-                <div onclick="toggleVideoSound(this)" class="rounded-[2.5rem] overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_20px_50px_rgba(0,0,0,0.9)] hover:shadow-[0_30px_60px_rgba(251,186,0,0.3)] hover:-translate-y-4 transition-all duration-500 reveal delay-300 border-2 border-gray-800 hover:border-smart-yellow">
-                    <video src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/29185ff7ca32e0c26f6564299564cc861d0b70b0/smartfit.piracicaba_1759782331_3737646114191522060_66308969593_1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"></video>
-                    
-                    <!-- Indicador de Som Nativo (Reels/TikTok) -->
-                    <div class="sound-btn w-12 h-12 bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center absolute top-5 right-5 text-white transition-all duration-300 z-30 group-hover:bg-smart-yellow group-hover:text-smart-black shadow-lg">
-                        <i class="ph-fill ph-speaker-slash text-2xl"></i>
-                    </div>
-
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-95 group-hover:opacity-100 transition-opacity">
-                        <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <div class="flex items-center gap-4 mb-3">
-                                <div class="w-12 h-12 rounded-full bg-gray-300 border-2 border-smart-yellow overflow-hidden shadow-lg shrink-0">
-                                    <img src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/refs/heads/main/503655947_17900195223209594_454523243514480896_n.jpg" alt="User" class="w-full h-full object-cover">
-                                </div>
-                                <span class="text-white font-black text-sm uppercase tracking-wider drop-shadow-md">@smartfit.piracicaba</span>
-                            </div>
-                            <div onclick="event.stopPropagation();" class="text-left w-full cursor-default">
-                                <p class="text-gray-100 text-sm font-medium leading-relaxed drop-shadow-lg line-clamp-2 transition-all duration-300">
-                                    No Smart Cross é pra sentir o corpo todo em ação! Você já fez o nosso treino aqui na nova Smart Piracicaba? 🏋🏽‍♀️ A aula é para todos, se você nunca fez não se acanhe em começar... 💪🏻 A Bruna, nossa aluna, já sente os resultados de verdade! 🚀🚀🚀 Quer experimentar essa intensidade toda? Confira os horários da aula de Cross nos destaques e vem treinar com a gente na Smart Fit Vila Rezende!
-                                </p>
-                                <button onclick="toggleCaption(this)" class="text-blue-400 hover:text-blue-300 text-sm font-bold mt-1 drop-shadow-md cursor-pointer inline-block">mais</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
+        </section>
 
-            <p class="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-12 tracking-tight reveal drop-shadow-md">Agora é a sua vez de sentir isso na prática.</p>
-            <a href="#inicio" class="btn-shine bg-smart-yellow hover:bg-smart-yellowHover text-smart-black px-14 py-6 rounded-full font-black uppercase tracking-widest text-xl inline-flex items-center justify-center gap-3 transition-transform transform hover:scale-105 shadow-[0_15px_40px_rgba(251,186,0,0.4)] reveal delay-200">
-                QUERO MEU VIP <i class="ph-bold ph-ticket text-3xl"></i>
-            </a>
-        </div>
-    </section>
+        <!-- 6ª Seção - Prova Social -->
+        <section id="depoimentos" class="py-32 bg-[#0a0a0a] text-white relative overflow-hidden">
+            <div class="absolute inset-0 w-full h-[140%] -top-[20%] overflow-hidden z-0 parallax-wrapper" data-speed="0.25">
+                <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1920&auto=format&fit=crop" 
+                     alt="Fundo Prova Social" 
+                     class="w-full h-full object-cover animate-slow-pan opacity-40 grayscale mix-blend-luminosity">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/95 z-0"></div>
 
-    <!-- 7ª Seção - CTA Final -->
-    <section class="py-32 bg-smart-yellow text-center relative overflow-hidden">
-        <!-- Efeito Premium: Gradiente suave e Brilho focado -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-0 pointer-events-none"></div>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white rounded-full mix-blend-overlay filter blur-[120px] opacity-30 animate-pulse-slow pointer-events-none z-0"></div>
-        
-        <div class="max-w-5xl mx-auto px-4 relative z-20 reveal">
-            <h2 class="text-4xl md:text-6xl lg:text-[5.5rem] font-black uppercase text-smart-black mb-8 leading-[0.95] tracking-tighter drop-shadow-sm">
-                Agende seu <span class="text-white drop-shadow-md">acesso VIP</span> e sinta na prática como seu treino pode evoluir.
-            </h2>
-            <p class="text-smart-dark font-black mb-14 text-xl md:text-3xl drop-shadow-sm">As vagas gratuitas para esta semana são limitadas.</p>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
+                <h2 class="text-4xl md:text-5xl lg:text-[4rem] font-black uppercase tracking-tighter text-white mb-6 reveal leading-[1.05]">
+                    QUEM COMEÇA,<br>
+                    <span class="text-smart-yellow drop-shadow-[0_0_10px_rgba(251,186,0,0.3)]">PERCEBE A DIFERENÇA RÁPIDO.</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-300 mb-20 font-medium reveal delay-100 max-w-3xl mx-auto drop-shadow-md">
+                    Veja o que alunos estão dizendo depois de treinar com a SMART FIT
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-24">
+                    <!-- Video 1 -->
+                    <div onclick="toggleVideoSound(this)" class="rounded-[2.5rem] overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_20px_50px_rgba(0,0,0,0.9)] hover:shadow-[0_30px_60px_rgba(251,186,0,0.3)] hover:-translate-y-4 transition-all duration-500 reveal delay-100 border-2 border-gray-800 hover:border-smart-yellow">
+                        <video src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/29185ff7ca32e0c26f6564299564cc861d0b70b0/smartfit.piracicaba_1759241176_3733106420138181486_66308969593_1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"></video>
+                        
+                        <!-- Indicador de Som Nativo (Reels/TikTok) -->
+                        <div class="sound-btn w-12 h-12 bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center absolute top-5 right-5 text-white transition-all duration-300 z-30 group-hover:bg-smart-yellow group-hover:text-smart-black shadow-lg">
+                            <i class="ph-fill ph-speaker-slash text-2xl"></i>
+                        </div>
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-95 group-hover:opacity-100 transition-opacity">
+                            <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="w-12 h-12 rounded-full bg-gray-300 border-2 border-smart-yellow overflow-hidden shadow-lg shrink-0">
+                                        <img src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/refs/heads/main/503655947_17900195223209594_454523243514480896_n.jpg" alt="User" class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-white font-black text-sm uppercase tracking-wider drop-shadow-md">@smartfit.piracicaba</span>
+                                </div>
+                                <div onclick="event.stopPropagation();" class="text-left w-full cursor-default">
+                                    <p class="text-gray-100 text-sm font-medium leading-relaxed drop-shadow-lg line-clamp-2 transition-all duration-300">
+                                        Já experimentou uma aula de Smart Bike na nossa nova unidade? Se você curte cardio com intensidade, música animada e muita energia, essa é a experiência perfeita. 🚴‍♀️ O Élcio, nosso aluno há 10 anos, contou como é viver essa vibe e ser Smart. Porque aqui, queimar calorias é sinônimo de diversão! 💛 Temos vários horários ao longo da semana — é só conferir nos destaques. Bora pedalar com a gente na nova Smart Fit Piracicaba?
+                                    </p>
+                                    <button onclick="toggleCaption(this)" class="text-blue-400 hover:text-blue-300 text-sm font-bold mt-1 drop-shadow-md cursor-pointer inline-block">mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div onclick="toggleVideoSound(this)" class="rounded-[2.5rem] overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_20px_50px_rgba(0,0,0,0.9)] hover:shadow-[0_30px_60px_rgba(251,186,0,0.3)] hover:-translate-y-4 transition-all duration-500 reveal delay-200 border-2 border-gray-800 hover:border-smart-yellow md:-translate-y-8 md:hover:-translate-y-12">
+                        <video src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/29185ff7ca32e0c26f6564299564cc861d0b70b0/smartfit.piracicaba_1759406055_3734490082683456730_66308969593_1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"></video>
+                        
+                        <!-- Indicador de Som Nativo (Reels/TikTok) -->
+                        <div class="sound-btn w-12 h-12 bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center absolute top-5 right-5 text-white transition-all duration-300 z-30 group-hover:bg-smart-yellow group-hover:text-smart-black shadow-lg">
+                            <i class="ph-fill ph-speaker-slash text-2xl"></i>
+                        </div>
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-95 group-hover:opacity-100 transition-opacity">
+                            <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="w-12 h-12 rounded-full bg-gray-300 border-2 border-smart-yellow overflow-hidden shadow-lg shrink-0">
+                                        <img src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/refs/heads/main/503655947_17900195223209594_454523243514480896_n.jpg" alt="User" class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-white font-black text-sm uppercase tracking-wider drop-shadow-md">@smartfit.piracicaba</span>
+                                </div>
+                                <div onclick="event.stopPropagation();" class="text-left w-full cursor-default">
+                                    <p class="text-gray-100 text-sm font-medium leading-relaxed drop-shadow-lg line-clamp-2 transition-all duration-300">
+                                        Bora, dançar? As aulas de Fitdance na Smart Fit Piracicaba são pura explosão de energia! É treino, é festa, é música contagiante que faz o corpo e a mente vibrarem. A Eva, nossa aluna há 2 anos, já vive essa experiência — e agora, na nova unidade Vila Rezende em Piracicaba, tudo que era bom ficou muito melhor! Quer treinar, dançar e se divertir em Piracicaba? Confira os horários de Fitdance da unidade Vila Rezende nos nossos destaques e vem com a gente!
+                                    </p>
+                                    <button onclick="toggleCaption(this)" class="text-blue-400 hover:text-blue-300 text-sm font-bold mt-1 drop-shadow-md cursor-pointer inline-block">mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div onclick="toggleVideoSound(this)" class="rounded-[2.5rem] overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_20px_50px_rgba(0,0,0,0.9)] hover:shadow-[0_30px_60px_rgba(251,186,0,0.3)] hover:-translate-y-4 transition-all duration-500 reveal delay-300 border-2 border-gray-800 hover:border-smart-yellow">
+                        <video src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/29185ff7ca32e0c26f6564299564cc861d0b70b0/smartfit.piracicaba_1759782331_3737646114191522060_66308969593_1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"></video>
+                        
+                        <!-- Indicador de Som Nativo (Reels/TikTok) -->
+                        <div class="sound-btn w-12 h-12 bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center absolute top-5 right-5 text-white transition-all duration-300 z-30 group-hover:bg-smart-yellow group-hover:text-smart-black shadow-lg">
+                            <i class="ph-fill ph-speaker-slash text-2xl"></i>
+                        </div>
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-95 group-hover:opacity-100 transition-opacity">
+                            <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <div class="w-12 h-12 rounded-full bg-gray-300 border-2 border-smart-yellow overflow-hidden shadow-lg shrink-0">
+                                        <img src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/refs/heads/main/503655947_17900195223209594_454523243514480896_n.jpg" alt="User" class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-white font-black text-sm uppercase tracking-wider drop-shadow-md">@smartfit.piracicaba</span>
+                                </div>
+                                <div onclick="event.stopPropagation();" class="text-left w-full cursor-default">
+                                    <p class="text-gray-100 text-sm font-medium leading-relaxed drop-shadow-lg line-clamp-2 transition-all duration-300">
+                                        No Smart Cross é pra sentir o corpo todo em ação! Você já fez o nosso treino aqui na nova Smart Piracicaba? 🏋🏽‍♀️ A aula é para todos, se você nunca fez não se acanhe em começar... 💪🏻 A Bruna, nossa aluna, já sente os resultados de verdade! 🚀🚀🚀 Quer experimentar essa intensidade toda? Confira os horários da aula de Cross nos destaques e vem treinar com a gente na Smart Fit Vila Rezende!
+                                    </p>
+                                    <button onclick="toggleCaption(this)" class="text-blue-400 hover:text-blue-300 text-sm font-bold mt-1 drop-shadow-md cursor-pointer inline-block">mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-12 tracking-tight reveal drop-shadow-md">Agora é a sua vez de sentir isso na prática.</p>
+                <a href="#inicio" class="btn-shine bg-smart-yellow hover:bg-smart-yellowHover text-smart-black px-14 py-6 rounded-full font-black uppercase tracking-widest text-xl inline-flex items-center justify-center gap-3 transition-transform transform hover:scale-105 shadow-[0_15px_40px_rgba(251,186,0,0.4)] reveal delay-200">
+                    QUERO MEU VIP <i class="ph-bold ph-ticket text-3xl"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- 7ª Seção - CTA Final -->
+        <section class="py-32 bg-smart-yellow text-center relative overflow-hidden">
+            <!-- Efeito Premium: Gradiente suave e Brilho focado -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-0 pointer-events-none"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white rounded-full mix-blend-overlay filter blur-[120px] opacity-30 animate-pulse-slow pointer-events-none z-0"></div>
             
-            <a href="#inicio" class="bg-smart-black hover:bg-gray-900 text-white px-14 py-7 rounded-full font-black uppercase tracking-widest text-xl md:text-2xl inline-flex items-center justify-center gap-4 transition-all transform hover:scale-105 hover:-translate-y-2 shadow-2xl hover:shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
-                Liberar meu VIP de 3 dias <i class="ph-bold ph-arrow-up text-3xl text-smart-yellow"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer Minimalista -->
-    <footer class="bg-[#050505] text-gray-600 py-16 text-center text-sm border-t border-gray-900">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
-            <a href="#inicio" class="bg-[#141414] hover:bg-white backdrop-blur-md px-10 py-5 rounded-[2rem] mb-10 opacity-90 hover:opacity-100 transition-all duration-500 inline-block group border border-smart-yellow/60 hover:border-white shadow-lg">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Smart_Fit_logo.svg/1280px-Smart_Fit_logo.svg.png" alt="Smart Fit Logo" class="h-6 md:h-8 w-auto brightness-0 invert opacity-70 group-hover:opacity-100 group-hover:brightness-100 group-hover:invert-0 transition-all duration-500">
-            </a>
-            <p class="mb-3 font-bold text-gray-500 uppercase tracking-widest text-xs">SMART FIT ESCOLA DE GINÁSTICA E DANÇA S.A</p>
-            <p class="mb-8 font-medium">Avenida Paulista, nº 1294, 2º andar, Bela Vista, SP - CEP 01310-100 | CNPJ: 07.594.978/0001-78</p>
-            <div class="flex justify-center gap-8 text-xs font-bold uppercase tracking-widest">
-                <a href="#" class="hover:text-smart-yellow transition-colors">Aviso de Privacidade</a>
-                <span class="text-gray-800">|</span>
-                <a href="#" class="hover:text-smart-yellow transition-colors">Termos de Uso</a>
+            <div class="max-w-5xl mx-auto px-4 relative z-20 reveal">
+                <h2 class="text-4xl md:text-6xl lg:text-[5.5rem] font-black uppercase text-smart-black mb-8 leading-[0.95] tracking-tighter drop-shadow-sm">
+                    Agende seu <span class="text-white drop-shadow-md">acesso VIP</span> e sinta na prática como seu treino pode evoluir.
+                </h2>
+                <p class="text-smart-dark font-black mb-14 text-xl md:text-3xl drop-shadow-sm">As vagas gratuitas para esta semana são limitadas.</p>
+                
+                <a href="#inicio" class="bg-smart-black hover:bg-gray-900 text-white px-14 py-7 rounded-full font-black uppercase tracking-widest text-xl md:text-2xl inline-flex items-center justify-center gap-4 transition-all transform hover:scale-105 hover:-translate-y-2 shadow-2xl hover:shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
+                    Liberar meu VIP de 3 dias <i class="ph-bold ph-arrow-up text-3xl text-smart-yellow"></i>
+                </a>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <!-- Footer Minimalista -->
+        <footer class="bg-[#050505] text-gray-600 py-16 text-center text-sm border-t border-gray-900">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+                <a href="#inicio" class="bg-[#141414] hover:bg-white backdrop-blur-md px-10 py-5 rounded-[2rem] mb-10 opacity-90 hover:opacity-100 transition-all duration-500 inline-block group border border-smart-yellow/60 hover:border-white shadow-lg">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Smart_Fit_logo.svg/1280px-Smart_Fit_logo.svg.png" alt="Smart Fit Logo" class="h-6 md:h-8 w-auto brightness-0 invert opacity-70 group-hover:opacity-100 group-hover:brightness-100 group-hover:invert-0 transition-all duration-500">
+                </a>
+                <p class="mb-3 font-bold text-gray-500 uppercase tracking-widest text-xs">SMART FIT ESCOLA DE GINÁSTICA E DANÇA S.A</p>
+                <p class="mb-8 font-medium">Avenida Paulista, nº 1294, 2º andar, Bela Vista, SP - CEP 01310-100 | CNPJ: 07.594.978/0001-78</p>
+                <div class="flex justify-center gap-8 text-xs font-bold uppercase tracking-widest">
+                    <a href="#" class="hover:text-smart-yellow transition-colors">Aviso de Privacidade</a>
+                    <span class="text-gray-800">|</span>
+                    <a href="#" class="hover:text-smart-yellow transition-colors">Termos de Uso</a>
+                </div>
+            </div>
+        </footer>
 
     </div> <!-- Fim do Wrapper Parallax Cortina -->
 
@@ -860,7 +946,7 @@
         }
 
         // --- Função para Expandir/Ocultar Legenda do Vídeo (Ver Mais) ---
-        window.toggleCaption = function(btn) {
+        function toggleCaption(btn) {
             const p = btn.previousElementSibling;
             if (p.classList.contains('line-clamp-2')) {
                 p.classList.remove('line-clamp-2');
@@ -869,7 +955,7 @@
                 p.classList.add('line-clamp-2');
                 btn.innerText = 'mais';
             }
-        };
+        }
 
         // --- Intersection Observer para Animação de Scroll (Reveal) ---
         (function() {
