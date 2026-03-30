@@ -618,16 +618,15 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
                 <!-- Video 1 -->
-                <div class="rounded-3xl overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_0_40px_rgba(0,0,0,0.8)] hover:shadow-[0_0_50px_rgba(251,186,0,0.2)] transition-all duration-500 reveal delay-100 border border-gray-800 hover:border-smart-yellow/50">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop" alt="Aluno treinando" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-90 group-hover:opacity-100 transition-opacity">
-                        
-                        <!-- Play Button animado -->
-                        <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:bg-smart-yellow group-hover:text-smart-black text-white transition-all duration-500 z-20">
-                            <i class="ph-fill ph-play text-3xl ml-1"></i>
-                            <div class="absolute inset-0 rounded-full border-2 border-white/50 animate-ping group-hover:border-smart-yellow"></div>
-                        </div>
+                <div onclick="toggleVideoSound(this)" class="rounded-3xl overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_0_40px_rgba(0,0,0,0.8)] hover:shadow-[0_0_50px_rgba(251,186,0,0.2)] transition-all duration-500 reveal delay-100 border border-gray-800 hover:border-smart-yellow/50">
+                    <video src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/29185ff7ca32e0c26f6564299564cc861d0b70b0/smartfit.piracicaba_1759241176_3733106420138181486_66308969593_1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"></video>
+                    
+                    <!-- Indicador de Som Nativo (Reels/TikTok) -->
+                    <div class="sound-btn w-10 h-10 bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center absolute top-4 right-4 text-white transition-all duration-300 z-30 group-hover:bg-smart-yellow group-hover:text-smart-black">
+                        <i class="ph-fill ph-speaker-slash text-xl"></i>
+                    </div>
 
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-90 group-hover:opacity-100 transition-opacity">
                         <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="w-10 h-10 rounded-full bg-gray-300 border-2 border-smart-yellow overflow-hidden shadow-lg"><img src="https://i.pravatar.cc/100?img=11" alt="User"></div>
@@ -639,35 +638,35 @@
                 </div>
 
                 <!-- Video 2 -->
-                <div class="rounded-3xl overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_0_40px_rgba(0,0,0,0.8)] hover:shadow-[0_0_50px_rgba(251,186,0,0.2)] transition-all duration-500 reveal delay-200 border border-gray-800 hover:border-smart-yellow/50 md:-translate-y-8">
-                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1469&auto=format&fit=crop" alt="Aluno treinando" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-90 group-hover:opacity-100 transition-opacity">
-                        
-                        <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:bg-smart-yellow group-hover:text-smart-black text-white transition-all duration-500 z-20">
-                            <i class="ph-fill ph-play text-3xl ml-1"></i>
-                            <div class="absolute inset-0 rounded-full border-2 border-white/50 animate-ping group-hover:border-smart-yellow"></div>
-                        </div>
+                <div onclick="toggleVideoSound(this)" class="rounded-3xl overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_0_40px_rgba(0,0,0,0.8)] hover:shadow-[0_0_50px_rgba(251,186,0,0.2)] transition-all duration-500 reveal delay-200 border border-gray-800 hover:border-smart-yellow/50 md:-translate-y-8">
+                    <video src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/29185ff7ca32e0c26f6564299564cc861d0b70b0/smartfit.piracicaba_1759406055_3734490082683456730_66308969593_1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"></video>
+                    
+                    <!-- Indicador de Som Nativo (Reels/TikTok) -->
+                    <div class="sound-btn w-10 h-10 bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center absolute top-4 right-4 text-white transition-all duration-300 z-30 group-hover:bg-smart-yellow group-hover:text-smart-black">
+                        <i class="ph-fill ph-speaker-slash text-xl"></i>
+                    </div>
 
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-90 group-hover:opacity-100 transition-opacity">
                         <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="w-10 h-10 rounded-full bg-gray-300 border-2 border-smart-yellow overflow-hidden shadow-lg"><img src="https://i.pravatar.cc/100?img=12" alt="User"></div>
                                 <span class="text-white font-black text-sm uppercase tracking-wider">@foco.diario</span>
                             </div>
-                            <p class="text-gray-300 text-sm font-medium leading-relaxed">"Os professores sempre ajudam quando preciso. A evolução na bioimpedância não mente! 📊📈"</p>
+                            <p class="text-gray-300 text-sm font-medium leading-relaxed">"Os professores sempre ajudam quando preciso. A evolução não mente! 📊📈"</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Video 3 -->
-                <div class="rounded-3xl overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_0_40px_rgba(0,0,0,0.8)] hover:shadow-[0_0_50px_rgba(251,186,0,0.2)] transition-all duration-500 reveal delay-300 border border-gray-800 hover:border-smart-yellow/50">
-                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1470&auto=format&fit=crop" alt="Aluna treinando" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-90 group-hover:opacity-100 transition-opacity">
-                        
-                        <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:bg-smart-yellow group-hover:text-smart-black text-white transition-all duration-500 z-20">
-                            <i class="ph-fill ph-play text-3xl ml-1"></i>
-                            <div class="absolute inset-0 rounded-full border-2 border-white/50 animate-ping group-hover:border-smart-yellow"></div>
-                        </div>
+                <div onclick="toggleVideoSound(this)" class="rounded-3xl overflow-hidden aspect-[9/16] relative group cursor-pointer shadow-[0_0_40px_rgba(0,0,0,0.8)] hover:shadow-[0_0_50px_rgba(251,186,0,0.2)] transition-all duration-500 reveal delay-300 border border-gray-800 hover:border-smart-yellow/50">
+                    <video src="https://raw.githubusercontent.com/ohebertfernandes/smartfit/29185ff7ca32e0c26f6564299564cc861d0b70b0/smartfit.piracicaba_1759782331_3737646114191522060_66308969593_1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"></video>
+                    
+                    <!-- Indicador de Som Nativo (Reels/TikTok) -->
+                    <div class="sound-btn w-10 h-10 bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center absolute top-4 right-4 text-white transition-all duration-300 z-30 group-hover:bg-smart-yellow group-hover:text-smart-black">
+                        <i class="ph-fill ph-speaker-slash text-xl"></i>
+                    </div>
 
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-8 text-left opacity-90 group-hover:opacity-100 transition-opacity">
                         <div class="relative z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                             <div class="flex items-center gap-3 mb-3">
                                 <div class="w-10 h-10 rounded-full bg-gray-300 border-2 border-smart-yellow overflow-hidden shadow-lg"><img src="https://i.pravatar.cc/100?img=9" alt="User"></div>
@@ -719,8 +718,47 @@
         </div>
     </footer>
 
-    <!-- Script de Animação de Scroll (Intersection Observer) -->
+    <!-- Script de Animação de Scroll e Áudio dos Vídeos -->
     <script>
+        // --- Função para mutar/desmutar vídeos ---
+        function toggleVideoSound(cardElement) {
+            const video = cardElement.querySelector('video');
+            const icon = cardElement.querySelector('.sound-btn i');
+            
+            if (video.muted) {
+                // Mutar todos os outros vídeos da página primeiro
+                document.querySelectorAll('video').forEach(v => {
+                    if (v !== video) {
+                        v.muted = true;
+                        const otherCard = v.closest('.group');
+                        if (otherCard) {
+                            const otherIcon = otherCard.querySelector('.sound-btn i');
+                            if (otherIcon) {
+                                otherIcon.classList.remove('ph-speaker-high');
+                                otherIcon.classList.add('ph-speaker-slash');
+                            }
+                        }
+                    }
+                });
+
+                // Desmutar o vídeo clicado e reiniciar do começo para ele ouvir a mensagem
+                video.muted = false;
+                video.currentTime = 0; 
+                
+                // Atualizar ícone
+                icon.classList.remove('ph-speaker-slash');
+                icon.classList.add('ph-speaker-high');
+            } else {
+                // Mutar o vídeo clicado
+                video.muted = true;
+                
+                // Atualizar ícone
+                icon.classList.remove('ph-speaker-high');
+                icon.classList.add('ph-speaker-slash');
+            }
+        }
+
+        // --- Intersection Observer para Animação de Scroll ---
         document.addEventListener("DOMContentLoaded", () => {
             const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
 
